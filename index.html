@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <link href="http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-    	
+	<head>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<div class="people">
+			<div class="title img people">people</div>
+			<div class="main">
+				<div class="main-line head">
+					<div class="avatar">&nbsp;</div>
+					<div class="name">&nbsp;</div>
+					<div class="ideas">Ideas</div>
+					<div class="following">Following</div>
+					<div class="followers">Followers</div>
+					<br class="clear" />
+				</div>
+				<div class="main-line">
+					<div class="avatar"><img src="img/avatar.png"></div>
+					<div class="name">
+						<div class="full-name"><a href="#">Adam</a></span><span class="img unfollow switcher">&nbsp;</span></div>
+						<div class="num"><span class="img rating">&nbsp;</span><span>10</span></div>
+					</div>
+					<div class="ideas">100</div>
+					<div class="following">100</div>
+					<div class="followers">100</div>
+					<br class="clear" />
+				</div>
+				<div class="main-line">
+					<div class="avatar"><img src="img/noavatar.png"></div>
+					<div class="name">
+						<div class="full-name"><span><a href="#">Adam</a></span><span class="img follow switcher">&nbsp;</span></div>
+						<div class="num"><span class="img rating">&nbsp;</span><span>10</span></div>
+					</div>
+					<div class="ideas">100</div>
+					<div class="following">100</div>
+					<div class="followers">100</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div class="show-more">&nbsp;</div>
+		</div>
 		<script src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
-		<script src="http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-        <script src="template.js"></script>
-    </body>
+		<script src="template.js"></script>
+		<script>
+		$('.switcher').on('click', function () {
+			$(this).toggleClass('follow').toggleClass('unfollow');
+		});
+		</script>
+	</body>
 </html>
